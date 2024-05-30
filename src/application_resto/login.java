@@ -48,6 +48,7 @@ public class login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        signe1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
@@ -76,6 +77,20 @@ public class login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         jLabel2.setText("RESTAURANT");
 
+        signe1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        signe1.setForeground(new java.awt.Color(255, 0, 51));
+        signe1.setText("close");
+        signe1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signe1MouseClicked(evt);
+            }
+        });
+        signe1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signe1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -83,14 +98,18 @@ public class login extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(261, 261, 261)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(signe1)
+                .addGap(79, 79, 79))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(39, 39, 39))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(signe1))
+                .addGap(38, 38, 38))
         );
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
@@ -224,6 +243,14 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_username1ActionPerformed
 
+    private void signe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signe1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_signe1ActionPerformed
+
+    private void signe1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signe1MouseClicked
+        System.exit(1);
+    }//GEN-LAST:event_signe1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -270,6 +297,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField password;
     private javax.swing.JButton signe;
+    private javax.swing.JButton signe1;
     private javax.swing.JTextField username;
     private javax.swing.JTextField username1;
     // End of variables declaration//GEN-END:variables
